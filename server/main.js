@@ -3,16 +3,13 @@
 
 var chalk = require('chalk');
 
-// Requires in ./db/index.js -- which returns a promise that represents
-// sequelize syncing its models to the postgreSQL database.
 var startDb = require('./db');
 
-// Create a node server instance! cOoL!
 var server = require('http').createServer();
 
 var createApplication = function () {
     var app = require('./app');
-    server.on('request', app); // Attach the Express application.
+    server.on('request', app);
 };
 
 var startServer = function () {
