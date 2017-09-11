@@ -3,9 +3,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Form from './Form'
+import AppContainer from './AppContainer'
 
 ReactDOM.render(
-  <Form />,
+  <AppContainer />,
   document.getElementById('app')
 )
