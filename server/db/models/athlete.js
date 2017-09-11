@@ -19,6 +19,27 @@ const Athlete = db.define('athlete', {
   dob: {
     type: DataTypes.STRING
   },
+  location: {
+    type: DataTypes.STRING
+  },
+  association: {
+    type: DataTypes.STRING
+  },
+  team: {
+    type: DataTypes.STRING
+  },
+  about: {
+    type: DataTypes.STRING
+  },
+  charities: {
+    type: DataTypes.STRING
+  },
+  married: {
+    type: DataTypes.BOOLEAN
+  },
+  twitter: {
+    type: DataTypes.STRING
+  }
 })
 
 module.exports = Athlete;
