@@ -16,7 +16,7 @@ export default class AppContainer extends Component {
       sport: '',
       about: '',
       charities: '',
-      married: false
+      married: true
     }
     this.submitForm = this.submitForm.bind(this)
     this.submitBasicInfo = this.submitBasicInfo.bind(this)

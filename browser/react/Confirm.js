@@ -1,7 +1,5 @@
 import React from 'react'
-
-import TextField from './TextField'
-import DropDown from './DropDown'
+import { Link } from 'react-router'
 
 const Confirm = props => {
   return (
@@ -17,21 +15,10 @@ const Confirm = props => {
       <p>{props.sport}</p>
       <p>{props.dob}</p>
       <p>{props.nationality}</p>
+      <Link to='/about'>Back</Link>
       <button onClick={props.submitForm}>Submit</button>
     </div>
   )
 }
 
 export default Confirm
-
-      // name: '',
-      // dob: '',
-      // nationality: '',
-      // location: '',
-      // association: '',
-      // team: '',
-      // gender: '',
-      // sport: '',
-      // about: '',
-      // charities: '',
-      // married: false
