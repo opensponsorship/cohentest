@@ -1,22 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Button } from 'react-bootstrap'
+
+import Entry from './Entry'
+import BackButton from './BackButton'
 
 const Confirm = props => {
   return (
     <div>
-      <p>{props.name}</p>
-      <p>{props.gender}</p>
-      <p>{props.team}</p>
-      <p>{props.location}</p>
-      <p>{props.association}</p>
-      <p>{props.charities}</p>
-      <p>{props.about}</p>
-      <p>{props.married}</p>
-      <p>{props.sport}</p>
-      <p>{props.dob}</p>
-      <p>{props.nationality}</p>
-      <Link to='/about'>Back</Link>
-      <button onClick={props.submitForm}>Submit</button>
+      <h3>Confirm Details</h3>
+      <Entry type='Name' value={props.name} />
+      <Entry type='Gender' value={props.gender} />
+      <Entry type='Date of Birth' value={props.dob} />
+      <Entry type='Nationality' value={props.nationality} />
+      <Entry type='Location' value={props.location} />
+      <Entry type='Sports' value={props.sports} />
+      <Entry type='Association' value={props.association} />
+      <Entry type='Team' value={props.team} />
+      <Entry type='Marital Status' value={props.married} />
+      <Entry type='About Me' value={props.about} />
+      <BackButton address='/about' />
+      <Button onClick={props.submitForm} bsStyle='link'>Submit</Button>
     </div>
   )
 }

@@ -7,7 +7,7 @@ const Athlete = db.define('athlete', {
   name: {
     type: DataTypes.STRING
   },
-  sport: {
+  sports: {
     type: DataTypes.STRING
   },
   nationality: {
@@ -29,9 +29,6 @@ const Athlete = db.define('athlete', {
     type: DataTypes.STRING
   },
   about: {
-    type: DataTypes.STRING
-  },
-  charities: {
     type: DataTypes.STRING
   },
   married: {
