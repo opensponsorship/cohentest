@@ -37,6 +37,7 @@ export default class AppContainer extends Component {
       married: this.state.married
     }
     axios.post('/api/athletes', athlete)
+    .then(athlete => browserHistory.replace('/table'))
     .catch(err => console.error(err))
   }
 
@@ -48,8 +49,7 @@ export default class AppContainer extends Component {
       gender: e.target.gender.value,
       nationality: e.target.nationality.value,
       dob: e.target.dob.value
-    })
-    browserHistory.replace('/about')
+    }, this.navigate('/about'))
   }
 
   submitAbout(e) {
@@ -60,8 +60,11 @@ export default class AppContainer extends Component {
       team: e.target.team.value,
       about: e.target.about.value,
       married: e.target.married.value
-    })
-    browserHistory.replace('/confirm')
+    }, this.navigate('/confirm'))
+  }
+
+  navigate(address) {
+    browserHistory.replace(address)
   }
 
   render(){

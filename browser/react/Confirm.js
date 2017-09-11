@@ -16,7 +16,7 @@ const Confirm = props => {
       <Entry type='Sports' value={props.sports} />
       <Entry type='Association' value={props.association} />
       <Entry type='Team' value={props.team} />
-      <Entry type='Marital Status' value={props.married} />
+      <Entry type='Marital Status' value={props.married === true ? 'Married' : 'Single'} />
       <Entry type='About Me' value={props.about} />
       <BackButton address='/about' />
       <Button onClick={props.submitForm} bsStyle='link'>Submit</Button>
