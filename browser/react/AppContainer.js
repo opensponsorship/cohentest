@@ -37,7 +37,7 @@ export default class AppContainer extends Component {
       married: this.state.married
     }
     axios.post('/api/athletes', athlete)
-    .then(athlete => browserHistory.replace('/table'))
+    .then(athlete => this.navigate('/table'))
     .catch(err => console.error(err))
   }
 
