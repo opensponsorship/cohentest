@@ -9,7 +9,8 @@
     "test:player": "node_modules/.bin/testem",
     "seed": "node ./bin/seed",
     "db-init": "pg-init juke",
-    "postinstall": "npm run db-init"
+    "postinstall": "npm run db-init",
+    "deploy-heroku": "bin/deploy-heroku.sh"
   },
   "dependencies": {
     "axios": "^0.15.2",
